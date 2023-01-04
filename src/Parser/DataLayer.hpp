@@ -21,8 +21,8 @@ namespace TG
             enum eMetaType { Operator, Value };
 
             eMetaType metaType{Operator};
-            TokenReaderIndex tokenReaderIndex{-1};
-            Index previousPeerIndex{-1};
+            TokenReaderIndex tokenReaderIndex = TokenReaderIndex(-1);
+            Index previousPeerIndex = Index(-1);
             Index data1;
             Index data2;
 
