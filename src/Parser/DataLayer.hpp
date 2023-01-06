@@ -61,7 +61,6 @@ namespace TG
                         char const* str) noexcept
             {
                 Token<Iterator, TypesMeta> token;
-                token.isRead = false;
                 Iterator copy = begin;
 
                 for (; copy != end && *str != '\0'; ++copy, ++str)
@@ -207,8 +206,8 @@ namespace TG
             }
         };
         template <typename Iterator,
-                typename TypesMeta,
-                typename TokenReader>
+                  typename TypesMeta,
+                  typename TokenReader>
         struct Lexer<Iterator, TypesMeta, TypeList<TokenReader>>
         {
             static inline
